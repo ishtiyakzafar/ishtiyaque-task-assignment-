@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parentDiv {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.percent {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bars {
+  width: 50%;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  border: 1px solid rgb(185, 184, 184);
+}
+.bar {
+  width: 50px;
+  background: rgb(241, 85, 85);
+  position: relative;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  animation: animate 1 4s;
+  padding-top: 10px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+::selection {
+  background: rgb(241, 85, 85);
+}
+.bar:hover {
+  background: rgb(212, 122, 122);
+}
+.bar span,
+.bar1 span {
+  position: absolute;
+  bottom: -30px;
+  color: black;
+  text-transform: uppercase;
+}
+
+/* .bar1 {
+  max-height: 50%;
+} */
+.bar2 {
+  max-height: 70%;
+}
+.bar3 {
+  max-height: 30%;
+}
+.bar4 {
+  max-height: 90%;
+}
+.bar5 {
+  max-height: 60%;
+}
+@keyframes animate {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.mainDiv {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.piChart {
+  width: 250px;
+  height: 250px;
+  border: 2px solid rgb(241, 85, 85);
+  border-radius: 50%;
+  position: relative;
+}
+.line1 {
+  border: 1px solid black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  transform: rotate3d(50);
+
+  /* text-align: center; */
+}
+.line2 {
+  border: 1px solid black;
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 992px) {
+  .bars {
+    width: 65%;
+  }
+}
+@media (max-width: 768px) {
+  .bars {
+    width: 80%;
+  }
+  .bar {
+    width: 40px;
+  }
+  .bar span,
+  .bar1 span {
+    font-size: 10px;
+    font-weight: bold;
+  }
+}

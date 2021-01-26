@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="percent">
+        <div>100%</div>
+        <div>50%</div>
+        <div>0%</div>
+      </div>
+      <div id="barDiv" class="bars"></div>
+    </div>
+
+    <div class="mainDiv">
+      <div class="piChart">
+        <div class="line1"></div>
+        <div class="line2"></div>
+      </div>
+    </div>
+    <script>
+      const data = [
+        {
+          percent: 50,
+          name: "HTML",
+        },
+        {
+          percent: 60,
+          name: "CSS",
+        },
+        {
+          percent: 75,
+          name: "Bootstrap",
+        },
+        {
+          percent: 40,
+          name: "JavaScript",
+        },
+        {
+          percent: 90,
+          name: "React",
+        },
+      ];
+      const bardiv = document.getElementById("barDiv");
+      console.log(bardiv);
+      let bar = "";
+      for (const ele of data) {
+        bar += `<div style="max-height: ${ele.percent}%" class="bar">${ele.percent}%<span>${ele.name}</span></div>`;
+        bardiv.innerHTML = bar;
+      }
+    </script>
+  </body>
+</html>

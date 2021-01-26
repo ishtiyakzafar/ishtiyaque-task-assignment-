@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+.navBar {
+  height: 50px;
+  /* margin: auto; */
+  background: tomato;
+}
+.navBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 20%;
+  text-align: center;
+}
+.logo li a {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+}
+.logo li {
+  list-style: none;
+}
+.menu {
+  width: 80%;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+}
+.menu ul li {
+  list-style: none;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: tomato;
+  font-size: 20px;
+  text-align: center;
+}
+ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.menu ul li ul {
+  display: none;
+}
+.menu ul li:hover > ul {
+  display: block;
+}
+.menu ul li:hover {
+  background: #27ae60;
+}
+.menu ul li ul li:hover {
+  background: black;
+}
+
+.centreBtn {
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.styleBtn button,
+.changeColor {
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  background: tomato;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}
+.loading_icon {
+  padding: 0px 5px;
+  color: #fff;
+  font-size: 20px;
+}
+.changeColor {
+  background: rgb(228, 147, 133);
+  cursor: auto;
+}
+.hideBar {
+  position: absolute;
+  top: 11px;
+  right: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+/* sideBar ****************/
+.sideBar {
+  background: #2f3640;
+  width: 200px;
+  z-index: 10;
+  position: fixed;
+  height: 90vh;
+  top: 50px;
+  right: -200px;
+  transition: all 0.4s ease;
+}
+
+.sideBar ul li a {
+  color: #fff;
+}
+.sideBar ul li {
+  list-style: none;
+  padding: 15px 10px;
+  border-bottom: 1px solid red;
+}
+.showHides {
+  display: none;
+}
+.sideBar ul li ul li {
+  padding: 5px 10px;
+  border: none;
+}
+.sideBar ul li a:hover {
+  color: #8395a7;
+  transition: 0.2s;
+}
+
+@media (max-width: 992px) {
+  .menu {
+    display: none;
+  }
+  .logo {
+    width: 100%;
+    text-align: left;
+    padding-left: 80px;
+  }
+  .hideBar {
+    display: block;
+  }
+  .change .sideBar {
+    right: 0;
+  }
+}

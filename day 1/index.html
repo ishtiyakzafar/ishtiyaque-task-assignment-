@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navBar">
+      <div class="logo">
+        <li><a href="#">NAVBAR</a></li>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#">About Us</a>
+            <ul>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Mission</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Services</a>
+            <ul>
+              <li><a href="#">Web design</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Gallery</a>
+            <ul>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Activities</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+            <ul>
+              <li><a href="#">Location</a></li>
+              <li><a href="#">Phone no</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <span onclick="showhide()" class="hideBar"
+      ><i class="fas fa-bars"></i
+    ></span>
+    <div id="sideBardiv">
+      <div class="sideBar sideBarshow">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>
+            <a onclick="showMenu()" href="#">About Us</a>
+            <ul id="showHide" class="showHides">
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Mission</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </li>
+          <li>
+            <a onclick="showMenu1()" href="#">Services</a>
+            <ul id="showHide1" class="showHides">
+              <li><a href="#">Web design</a></li>
+            </ul>
+          </li>
+          <li>
+            <a onclick="showMenu2()" href="#">Gallery</a>
+            <ul id="showHide2" class="showHides">
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Activities</a></li>
+            </ul>
+          </li>
+          <li>
+            <a onclick="showMenu3()" href="#">Contact Us</a>
+            <ul id="showHide3" class="showHides">
+              <li><a href="#">Location</a></li>
+              <li><a href="#">Phone no</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="btn" class="styleBtn centreBtn">
+      <button class="changeColor" id="disBtn" onclick="disableBtn()">
+        <span id="showIcon" class="hide"
+          ><i class="loading_icon fa fa-spinner fa-spin"></i></span
+        ><span id="cngBtnText">Submit</span>
+      </button>
+    </div>
+    <script>
+      const disableBtn = () => {
+        showIcon.classList.remove("hide");
+        btn.classList.remove("styleBtn");
+        cngBtnText.innerHTML = "Submiting...";
+        disBtn.disabled = true;
+      };
+
+      const showMenu = () => {
+        showHide.classList.toggle("showHides");
+      };
+      const showMenu1 = () => {
+        showHide1.classList.toggle("showHides");
+      };
+      const showMenu2 = () => {
+        showHide2.classList.toggle("showHides");
+      };
+      const showMenu3 = () => {
+        showHide3.classList.toggle("showHides");
+      };
+
+      const showhide = () => {
+        sideBardiv.classList.toggle("change");
+      };
+
+      // const hamburger_icon = document.getElementById("demo2");
+      // const container = document.getElementById("container");
+
+      // hamburger_icon.addEventListener("click", () => {
+      //   container.classList.toggle("change");
+      // });
+    </script>
+  </body>
+</html>

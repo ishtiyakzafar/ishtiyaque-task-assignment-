@@ -1,9 +1,9 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-body {
+} */
+/* body {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -33,3 +33,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.mainDiv ul li {
+  list-style: none;
+  padding-left: 20px;
+}
+.change .hide {
+  display: none;
+} */

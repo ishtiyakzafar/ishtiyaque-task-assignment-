@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Roboto-light";
+  src: url("./assets/Fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto-regular";
+  src: url("./assets/Fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-medium";
+  src: url("./assets/Fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "Roboto-bold";
+  src: url("./assets/Fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto-black";
+  src: url("./assets/Fonts/Roboto-Black.ttf");
+}
+body {
+  background: #eee;
+}
+.style__Card {
+  float: left;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1) !important;
+}
+.style__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.style__title {
+  font-family: "Roboto-medium";
+  text-transform: uppercase;
+  font-size: 16px;
+  color: black;
+}
+.style__bodyText {
+  font-family: "Roboto-regular";
+  text-align: justify;
+  font-size: 14px;
+}

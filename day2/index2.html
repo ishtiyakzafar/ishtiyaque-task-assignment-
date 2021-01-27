@@ -7,42 +7,76 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="heading">
-      <div class="header" onclick="showhide()">Menu</div>
-      <div id="showlist" class="hide collapse">
-        <div class="header" onclick="showhide1()">Menu1</div>
-        <ul id="showlist1" class="hide collapse1">
-          <li>sub menu</li>
-          <li>sub menu</li>
-          <li>sub menu</li>
-        </ul>
-        <div class="header" onclick="showhide2()">Menu2</div>
-        <ul id="showlist2" class="hide collapse2">
-          <li>sub menu</li>
-          <li>sub menu</li>
-          <li>sub menu</li>
-        </ul>
-      </div>
-    </div>
+    <div id="sidemenu"></div>
 
     <script>
-      const showhide = () => {
-        showlist.classList.toggle("collapse");
-      };
+      const menudata = [
+        {
+          menu: "service",
+          submenu1: "branding",
+          submenu2: "more1",
+          submenu3: "more2",
+          submenu4: "web dev",
+          submenu5: "seo",
+        },
+        {
+          menu: "jobs",
+          submenu1: "ui/ux",
+          submenu2: "ui/ux designer",
+          submenu3: "ux designer",
+          submenu4: "ui designer",
+          submenu5: "development",
+        },
+        // {
+        //   menu: "about us",
+        //   submenu1: "our team",
+        //   submenu2: "clients",
+        //   submenu3: "our work",
+        //   submenu4: "graphic design",
+        //   submenu5: "logo design",
+        // },
+      ];
 
-      const showhide1 = () => {
-        showlist1.classList.toggle("collapse1");
-      };
-      const showhide2 = () => {
-        showlist2.classList.toggle("collapse2");
-      };
+      let list = "";
+
+      for (const data of menudata) {
+        list += `  <label id='title' class="menu1">${data.menu}</label>
+      <ul id='list'>
+        <li ><span id='title1'>${data.submenu1}</span>
+          
+          <ul id='list1'>
+            <li>${data.submenu2}</li>
+            <li>${data.submenu3}</li>
+          </ul>
+        </li>
+        <li>${data.submenu4}</li>
+        <li>${data.submenu5}</li>
+      </ul>`;
+        sidemenu.innerHTML = list;
+      }
+
+      const title = document.getElementById("title");
+      const lists = document.getElementById("list");
+
+      lists.style.display = "none";
+      title.addEventListener("click", () => {
+        if (lists.style.display == "none") {
+          lists.style.display = "block";
+        } else {
+          lists.style.display = "none";
+        }
+      });
+      const title1 = document.getElementById("title1");
+      const lists1 = document.getElementById("list1");
+
+      lists1.style.display = "none";
+      title1.addEventListener("click", () => {
+        if (lists1.style.display == "none") {
+          lists1.style.display = "block";
+        } else {
+          lists1.style.display = "none";
+        }
+      });
     </script>
   </body>
 </html>
-
-<!-- 
-<div class="header" onclick="showhide2()">Click me too</div>
-        <div id="showlist2" class="hide collapse2">
-          <div class="header" onclick="showhide3()">Click me too</div>
-          <div id="showlist3" class="hide collapse3"></div>
-        </div> -->
